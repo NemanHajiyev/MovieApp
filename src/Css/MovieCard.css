@@ -6,14 +6,13 @@
     align-items: flex-start;
     flex-direction: column;
     position: relative;
-    border: 2px solid rgb(24, 24, 113);
+    border: 3px solid rgb(24, 24, 113);
     border-radius: 20px;
-
 }
 
 
 .movie-card img {
-    border-radius: 20px;
+    border-radius: 22px;
     width: 300px;
     object-fit: cover;
 }
