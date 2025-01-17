@@ -1,11 +1,18 @@
 import MovieCard from "./Components/MovieCard"
+import Navbar from "./Components/Navbar"
+import { Route, Routes } from "react-router-dom"
+import Home from "./Pages/Home"
+import Favories from "./Pages/Favories"
 
 function App() {
 
   return (
-    <div>
-      <MovieCard movie={{ title: "Film-1", relase_date: "2022" }} />
-      <MovieCard movie={{ title: "Film-2", relase_date: "2019" }} />
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorie" element={<Favories />} />
+      </Routes>
     </div>
   )
 }

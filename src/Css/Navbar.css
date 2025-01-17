@@ -1,0 +1,27 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgb(80, 80, 215);
+    color: aliceblue;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar-right {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.p {
+    cursor: pointer;
+}
