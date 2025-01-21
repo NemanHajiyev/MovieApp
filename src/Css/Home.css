@@ -26,13 +26,15 @@
 }
 
 .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 100%;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 95%;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
-.error-message {
+/* .error-message {
     width: 100%;
-}
+} */

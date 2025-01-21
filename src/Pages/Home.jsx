@@ -35,16 +35,17 @@ const Home = () => {
         try {
             const searchResult = await searchMovies(searchQuery);
             const matchedMovies = searchResult.filter(result => result.title.toLowerCase().includes(searchQuery.toLowerCase()));
-
-            if (matchedMovies.length > 0) {
+            if (matchedMovies.length) {
                 setMovies(matchedMovies);
             } else {
                 alert("No matching movies found.")
-                // setError("No matching movies found.");  
+                // setError("No matching movies found.")
+                setSearchQuery("")
             }
         } catch (err) {
             console.log(err);
-            setError("Failed to search movies ...");
+            alert("No matching movies found.")
+
         } finally {
             setLoading(false);
         }

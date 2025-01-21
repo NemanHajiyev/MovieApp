@@ -2,9 +2,10 @@ import React from 'react'
 import '../Css/MovieCard.css'
 
 const MovieCard = ({ movie }) => {
+    console.log(movie)
 
     const addFavorie = () => {
-        console.log("Click")
+        console.log(movie.title)
     }
     return (
         <div className='movie-card'>
