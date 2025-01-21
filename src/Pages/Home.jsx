@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { getPopularMovies, searchMovies } from '../Services/Api'
 import MovieCard from '../Components/MovieCard';
 
-const Home = () => {
+const Home = ({ addFavorie }) => {
     const [searchQuery, setSearchQuery] = useState("");
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(null);
@@ -72,7 +72,7 @@ const Home = () => {
 
                 {loading ? <div className='loading'>Loading...</div> :
                     movies?.map((movie) => (
-                        <MovieCard key={movie.id} movie={movie} />
+                        <MovieCard key={movie.id} movie={movie} addFavorie={addFavorie} />
                     ))
                 }
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import '../Css/MovieCard.css'
 
-const MovieCard = ({ movie }) => {
-    console.log(movie)
+const MovieCard = ({ movie, addFavorie }) => {
 
-    const addFavorie = () => {
-        console.log(movie.title)
+    const FavorieAdd = () => {
+        addFavorie(movie)
     }
+
     return (
         <div className='movie-card'>
             <div className='movie-poster'>
@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
                 </div>
             </div>
             <div className='movie-info'>
-                <button className='favorie-btn' onClick={addFavorie}>
+                <button className='favorie-btn' onClick={FavorieAdd}>
                     🤍
                 </button>
                 <h3>{movie.title}</h3>
