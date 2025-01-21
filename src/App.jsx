@@ -1,4 +1,3 @@
-import MovieCard from "./Components/MovieCard"
 import Navbar from "./Components/Navbar"
 import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
@@ -25,7 +24,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home addFavorie={addFavorie} />} />

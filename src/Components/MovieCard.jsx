@@ -1,8 +1,9 @@
 import React from 'react'
 import '../Css/MovieCard.css'
+import { FaRegHeart } from "react-icons/fa";
+
 
 const MovieCard = ({ movie, addFavorie }) => {
-
     const FavorieAdd = () => {
         addFavorie(movie)
     }
@@ -16,9 +17,9 @@ const MovieCard = ({ movie, addFavorie }) => {
                 </div>
             </div>
             <div className='movie-info'>
-                <button className='favorie-btn' onClick={FavorieAdd}>
-                    🤍
-                </button>
+
+                <FaRegHeart className='favorie-btn' onClick={FavorieAdd} />
+
                 <h3>{movie.title}</h3>
                 <p>{movie.release_date}</p>
             </div>
