@@ -1,8 +1,8 @@
 import React from 'react'
 import '../Css/MovieCard.css'
 
-const Favories = ({ films }) => {
-    console.log(films)
+const Favories = ({ films, removeItem }) => {
+
     return (
         <div>
             {
@@ -15,7 +15,7 @@ const Favories = ({ films }) => {
                             </div>
                         </div>
                         <div className='movie-info'>
-                            <button className='favorie-btn'>
+                            <button className='favorie-btn' onClick={() => removeItem(film)}>
                                 🤍
                             </button>
                             <h3>{film.title}</h3>

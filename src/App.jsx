@@ -18,15 +18,23 @@ function App() {
     }
   }
 
+  const removeItem = (movie) => {
+    const filtered = films.filter((film) => film.id !== movie.id);
+    setFilms(filtered)
+  };
+
+
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home addFavorie={addFavorie} />} />
-        <Route path="/favorie" element={<Favories films={films} />} />
+        <Route path="/favorie" element={<Favories films={films} removeItem={removeItem} />} />
       </Routes>
     </div>
   )
 }
 
 export default App
+
+
