@@ -31,22 +31,25 @@ const Home = () => {
         if (!searchQuery.trim()) return;
         if (loading) return;
         setLoading(true);
-
+        setError(null);
         try {
             const searchResult = await searchMovies(searchQuery);
-            console.log(searchResult)
-            setMovies(searchResult)
-            setError(null)
-        }
-        catch (err) {
-            console.log(err)
-            setError("Failed to search movies ...")
-        }
-        finally {
-            setLoading(false)
-        }
+            const matchedMovies = searchResult.filter(result => result.title.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    }
+            if (matchedMovies.length > 0) {
+                setMovies(matchedMovies);
+            } else {
+                alert("No matching movies found.")
+                // setError("No matching movies found.");  
+            }
+        } catch (err) {
+            console.log(err);
+            setError("Failed to search movies ...");
+        } finally {
+            setLoading(false);
+        }
+    };
+
 
     return (
         <div className='home'>
