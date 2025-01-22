@@ -1,31 +1,45 @@
-import React from 'react'
-import '../Css/MovieCard.css'
+import React, { useState } from 'react';
+import '../Css/MovieCard.css';
 import { FaRegHeart } from "react-icons/fa";
-
+import Modal from './Modal'
 
 const MovieCard = ({ movie, addFavorie }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const FavorieAdd = () => {
-        addFavorie(movie)
-    }
+        addFavorie(movie);
+    };
+
+    const getMovieDetails = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     return (
-        <div className='movie-card'>
-            <div className='movie-poster'>
-                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-                <div className='movie-overlay'>
 
+        <div className="movie-card-general">
+            <div className='movie-card'>
+                <div className='movie-poster'>
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                    <div className='movie-overlay'></div>
+                </div>
+                <div className='movie-info'>
+                    <FaRegHeart className='favorie-btn' onClick={FavorieAdd} />
+                    <h3>{movie.title}</h3>
+                    <p>{movie.release_date}</p>
+                    <button onClick={getMovieDetails}>Get Details</button>
                 </div>
             </div>
-            <div className='movie-info'>
-
-                <FaRegHeart className='favorie-btn' onClick={FavorieAdd} />
-
-                <h3>{movie.title}</h3>
-                <p>{movie.release_date}</p>
+            <div className='modal'>
+                {isModalOpen && (
+                    <Modal closeModal={closeModal} movie={movie} />
+                )}
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default MovieCard
+export default MovieCard;
