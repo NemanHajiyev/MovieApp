@@ -34,10 +34,33 @@
     position: absolute;
     margin-left: 85%;
     font-size: 25px;
-    color: red;
+    color: rgba(255, 0, 0, 0.462);
     cursor: pointer;
+}
+
+.favorie-btn:hover {
+    color: rgb(255, 0, 0);
 }
 
 .movie-info {
     margin-top: 20px;
+}
+
+.movie-info h4 {
+    width: 250px;
+}
+
+.detail-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(137, 43, 226, 0.549);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.detail-btn:hover {
+    background-color: blueviolet;
 }

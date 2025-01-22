@@ -8,6 +8,7 @@ const MovieCard = ({ movie, addFavorie }) => {
 
     const FavorieAdd = () => {
         addFavorie(movie);
+        alert("elave oludnu")
     };
 
     const getMovieDetails = () => {
@@ -28,9 +29,9 @@ const MovieCard = ({ movie, addFavorie }) => {
                 </div>
                 <div className='movie-info'>
                     <FaRegHeart className='favorie-btn' onClick={FavorieAdd} />
-                    <h3>{movie.title}</h3>
+                    <h4>{movie.title}</h4>
                     <p>{movie.release_date}</p>
-                    <button onClick={getMovieDetails}>Get Details</button>
+                    <button onClick={getMovieDetails} className='detail-btn'>Get Details</button>
                 </div>
             </div>
             <div className='modal'>
