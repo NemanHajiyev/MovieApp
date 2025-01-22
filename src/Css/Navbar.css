@@ -15,7 +15,7 @@
 }
 
 .navbar-right {
-    width: 150px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,4 +24,26 @@
 
 .p {
     cursor: pointer;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+.Navbar.dark {
+    background-color: #0f0f0f;
+}
+
+.theme-toggle {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    font-size: 1.5em;
 }

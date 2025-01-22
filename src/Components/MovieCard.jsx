@@ -8,7 +8,6 @@ const MovieCard = ({ movie, addFavorie }) => {
 
     const FavorieAdd = () => {
         addFavorie(movie);
-        alert("elave oludnu")
     };
 
     const getMovieDetails = () => {
