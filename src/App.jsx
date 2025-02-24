@@ -22,7 +22,6 @@ function App() {
     setFilms(filtered)
   };
 
-
   return (
     <div className="App" >
       <Navbar />

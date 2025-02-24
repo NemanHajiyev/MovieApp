@@ -39,7 +39,6 @@ const Home = ({ addFavorie }) => {
                 setMovies(matchedMovies);
             } else {
                 alert("No matching movies found.")
-                // setError("No matching movies found.")
                 setSearchQuery("")
             }
         } catch (err) {
